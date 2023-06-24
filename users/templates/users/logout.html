@@ -1,8 +1,19 @@
+{% extends 'users/base.html' %} {% block content %}
 
-    <div class="alert alert-success" role="alert">
-        <h2 style="text-align: center;">Logged out!</h2>
+<div class="card text-center">
+  <div class="card-header">
+    <div class="alert alert-warning" role="alert">
+      <h2 style="text-align: center">Logged out!</h2>
     </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <a href="{% url 'login' %}"> Login</a>
+    </h5>
+    <h5 class="card-title">
+      <a href="{% url 'home' %}">Go back to home.</a>
+    </h5>
+  </div>
+</div>
 
-    <h3>Login again?</h3>
-    <a href="{% url 'login' %}">---> Login</a> <br>
-    <a href="{% url 'home' %}"><--- Or go back to home.</a>
+{% endblock %}
